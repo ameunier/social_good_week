@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120607204941) do
+ActiveRecord::Schema.define(:version => 20120607205554) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -36,6 +36,33 @@ ActiveRecord::Schema.define(:version => 20120607204941) do
   end
 
   add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"
+
+  create_table "refinery_news_item_translations", :force => true do |t|
+    t.integer  "refinery_news_item_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "source"
+  end
+
+  add_index "refinery_news_item_translations", ["locale"], :name => "index_refinery_news_item_translations_on_locale"
+  add_index "refinery_news_item_translations", ["refinery_news_item_id"], :name => "index_2fe5614a8b4e9a5c34c0f93f230e423e36d53bda"
+
+  create_table "refinery_news_items", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "publish_date"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "image_id"
+    t.datetime "expiration_date"
+    t.string   "source"
+    t.string   "slug"
+  end
+
+  add_index "refinery_news_items", ["id"], :name => "index_refinery_news_items_on_id"
 
   create_table "refinery_page_part_translations", :force => true do |t|
     t.integer  "refinery_page_part_id"
