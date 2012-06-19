@@ -1,8 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700);
+
+html {
+	background-color: white;
+	width: 100%;
+}
+
 body {
-  background: white;
-  font-family: Verdana;
-  font-size: 13px;
-  line-height: 18px;
+  width: 100%;
+  color: black;
+  background-color: white;
+  font-family: 'Quattrocento Sans', sans-serif;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+#wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+#page_container {
+	width: 970px;
+	margin: 0 auto;
+}
+
+header {
+	height: 20px;
+	width: 100%;
+	h1 {
+		display: block;
+		width: 483px;
+	}
 }
 
 #body_content, #side_body_content {
@@ -16,8 +45,10 @@ body {
 #menu ul {
   list-style: none;
   padding: 0px;
+  display: block;
+  float: right;
   li {
-    float: left;
+    float: right;
     margin-right: 10px;
     a {
       display: block;
@@ -28,4 +59,8 @@ body {
       background: #CCC;
     }
   }
+}
+
+footer p {
+	text-align: center;
 }
