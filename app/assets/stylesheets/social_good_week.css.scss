@@ -26,11 +26,36 @@ body {
 }
 
 header {
-	height: 20px;
+	height: 200px;
 	width: 100%;
+	display: block;
 	h1 {
-		display: block;
 		width: 483px;
+		float: left;
+	}
+	nav {
+		display: block;
+		float: right;
+		height: 100%;
+		padding-top: 150px;
+	}
+	ul {
+	 	list-style: none;
+	  	padding: 0px;
+	  	display: block;
+	  	li {
+	    	float: left;
+	    	margin-right: 10px;
+	    	a {
+	      		display: block;
+	      		padding: 5px 10px;
+	      		text-decoration: none;
+				color: black;
+	    	}
+	    &.selected a, a:hover {
+	      background: #CCC;
+	    }
+	  }
 	}
 }
 
@@ -42,24 +67,7 @@ header {
   padding: 20px;
 }
 
-#menu ul {
-  list-style: none;
-  padding: 0px;
-  display: block;
-  float: right;
-  li {
-    float: right;
-    margin-right: 10px;
-    a {
-      display: block;
-      padding: 5px 10px;
-      text-decoration: none;
-    }
-    &.selected a, a:hover {
-      background: #CCC;
-    }
-  }
-}
+
 
 footer p {
 	text-align: center;
