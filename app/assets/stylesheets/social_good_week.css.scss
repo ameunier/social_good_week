@@ -1,3 +1,5 @@
+/*
+
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700);
 
 html {
@@ -69,6 +71,25 @@ header {
 
 
 
-footer p {
-	text-align: center;
+footer {
+	p {
+		text-align: center;
+	}
+	nav {
+		display: block;
+		text-align: center;
+	}
+	ul {
+		display: block;
+		list-style: none;
+		li {
+			padding: 1em;
+			float: left;
+			a {
+				display: block;
+			}
+		}
+	}
 }
+
+*/

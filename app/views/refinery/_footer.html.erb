@@ -1,6 +1,26 @@
 <footer>
-	<p>
-	  <%= t('.copyright', :year => Time.now.year,
+	<section id="partenaires">
+		<h2><img src="assets/cercles.png" />Nos Partenaires</h2>
+		<div><a href="" alt="site SFR"></a><img src="assets/partenaires/sfr.jpg" alt="partenaire sfr"/></a></div>
+		<div><a href="" alt="site iDact"></a><img src="assets/partenaires/idact.jpg" alt="partenaire idact"/></a></div>
+		<div><a href="" alt="site Fundraising Lab"></a><img src="assets/partenaires/fundraisinglab.jpg" alt="partenaire Fundraising Lab"/></a></div>
+		<div><a href="" alt="site Pro Bono"></a><img src="assets/partenaires/probono.jpg" alt="partenaire Pro Bono"/></a></div>
+		<div><a href="" alt="site Paris Incubateurs"></a><img src="assets/partenaires/parisincubateurs.jpg" alt="partenaire Paris Incubateurs"/></a></div>
+		<div><a href="" alt="site Mail For Good"></a><img src="assets/partenaires/mailforgood.jpg" alt="partenaire Mail For Good"/></a></div>
+		<div><a href="" alt="site SFR"></a><img src="assets/partenaires/sfr.jpg" alt="partenaire sfr"/></a></div>
+		<div><a href="" alt="site SFR"></a><img src="assets/partenaires/sfr.jpg" alt="partenaire sfr"/></a></div>
+	</section>
+	
+	<div>
+		<img src="assets/bg-footer.jpg" alt="background footer" />
+	</div>
+	<%= render(:partial => "/refinery/menu", :locals => {
+	             :dom_id => 'footer',
+	             :css => 'footer'
+	           }) %>
+	<div class="logo-footer">
+		<img src="assets/sgw-footer-logo.jpg" alt="Social Good Week"/><br/>
+		<%= t('.copyright', :year => Time.now.year,
 	                      :site_name => Refinery::Core.site_name) %>
-	</p>
+	</div>
 </footer>
