@@ -1,14 +1,22 @@
 <footer>
 	<section id="partenaires">
-		<h2><img src="assets/cercles.png" />Nos Partenaires</h2>
-		<div><a href="" alt="site SFR"></a><img src="assets/partenaires/sfr.jpg" alt="partenaire sfr"/></a></div>
-		<div><a href="" alt="site iDact"></a><img src="assets/partenaires/idact.jpg" alt="partenaire idact"/></a></div>
-		<div><a href="" alt="site Fundraising Lab"></a><img src="assets/partenaires/fundraisinglab.jpg" alt="partenaire Fundraising Lab"/></a></div>
-		<div><a href="" alt="site Pro Bono"></a><img src="assets/partenaires/probono.jpg" alt="partenaire Pro Bono"/></a></div>
-		<div><a href="" alt="site Paris Incubateurs"></a><img src="assets/partenaires/parisincubateurs.jpg" alt="partenaire Paris Incubateurs"/></a></div>
-		<div><a href="" alt="site Mail For Good"></a><img src="assets/partenaires/mailforgood.jpg" alt="partenaire Mail For Good"/></a></div>
-		<div><a href="" alt="site SFR"></a><img src="assets/partenaires/sfr.jpg" alt="partenaire sfr"/></a></div>
-		<div><a href="" alt="site SFR"></a><img src="assets/partenaires/sfr.jpg" alt="partenaire sfr"/></a></div>
+		<h2><img src="assets/cercles.png" />Partenaires</h2>
+		<div><a href="/partenaires#mailforgood" alt="MailForGood"><img src="assets/partenaires/mailforgood.jpg" alt="MailForGood"/></a></div>
+		<div><a href="/partenaires#sfr" alt="SFR"><img src="assets/partenaires/sfr.jpg" alt="SFR"/></a></div>
+		<div><a href="/partenaires#gdfsuez" alt="GDF Suez"><img src="assets/partenaires/gdfsuez.jpg" alt="GDF Suez"/></a></div>
+		<div><a href="/partenaires#arizuka" alt="Arizuka"><img src="assets/partenaires/arizuka.jpg" alt="MailForGood"/></a></div>
+		<div><a href="/partenaires#idact" alt="iDact"><img src="assets/partenaires/idact.jpg" alt="idact"/></a></div>
+		<div><a href="/partenaires#fundraisinglab" alt="FundRaising Lab"><img src="assets/partenaires/fundraisinglab.jpg" alt="FundRaising Lab"/></a></div>
+		<div><a href="/partenaires#probonolab" alt="Pro Bono Lab"><img src="assets/partenaires/probonolab.jpg" alt="Pro Bono Lab"/></a></div>
+		<div><a href="/partenaires#parisincubateurs" alt="Paris Incubateurs"><img src="assets/partenaires/parisincubateurs.jpg" alt="Paris Incubateurs"/></a></div>
+		<div><a href="/partenaires#aff" alt="AFF"><img src="assets/partenaires/aff.jpg" alt="AFF"/></a></div>
+		<div><a href="/partenaires#babyloan" alt="Babyloan"><img src="assets/partenaires/babyloan.jpg" alt="Babyloan"/></a></div>
+		<div><a href="/partenaires#cap" alt="CAP"><img src="assets/partenaires/cap.jpg" alt="CAP"/></a></div>
+		<div><a href="/partenaires#koeo" alt="Koeo"><img src="assets/partenaires/koeo.jpg" alt="Koeo"/></a></div>
+		<div><a href="/partenaires#makesense" alt="MakseSense"><img src="assets/partenaires/makesense.jpg" alt="MakeSense"/></a></div>
+		<div><a href="/partenaires#universiteparisdiderot" alt="Université Paris Diderot"><img src="assets/partenaires/universiteparisdiderot.jpg" alt="Université Paris Diderot"/></a></div>
+		<div><a href="/partenaires#ecolepolytechnique" alt="Ecole Polytechnique"><img src="assets/partenaires/ecolepolytechnique.jpg" alt="Ecole Polytechnique"/></a></div>
+		<div><a href="/partenaires#spear" alt="SPEAR"><img src="assets/partenaires/spear.jpg" alt="SPEAR"/></a></div>
 	</section>
 	
 	<div>
@@ -19,8 +27,11 @@
 	             :css => 'footer'
 	           }) %>
 	<div class="logo-footer">
-		<img src="assets/sgw-footer-logo.jpg" alt="Social Good Week"/><br/>
+		<img src="assets/sgw-footer-logo.jpg" alt="Social Good Week"/>
+		<br/>
 		<%= t('.copyright', :year => Time.now.year,
 	                      :site_name => Refinery::Core.site_name) %>
+		<br/><br/>
+		- <a href="/a-propos">Mentions légales</a> -
 	</div>
 </footer>
