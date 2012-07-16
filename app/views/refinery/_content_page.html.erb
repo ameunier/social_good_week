@@ -1,14 +1,18 @@
 <div id="wrap" class="gradient">
 	
-	<h4>Comment les nouvelles technologies peuvent-elles résoudre des problématiques sociétales ? </h4>
+	<% if @page.id == 1 %>
+		<h4>Comment les nouvelles technologies peuvent-elles résoudre des problématiques sociétales ?</h4>
+	<% end if %>
 	
 		<section id="left-column">
-			<div class="carte-france"><img src="assets/carte-france.jpg"/></div>
+			<% if @page.id == 1 %>
+				<iframe width="570" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?ie=UTF8&amp;msa=0&amp;msid=206225401531026339590.0004c3ef41f9aba1b00cb&amp;t=m&amp;ll=47.249407,3.164063&amp;spn=8.950641,25.004883&amp;z=5&amp;output=embed"></iframe><br /><small>Afficher <a href="https://maps.google.com/maps/ms?ie=UTF8&amp;msa=0&amp;msid=206225401531026339590.0004c3ef41f9aba1b00cb&amp;t=m&amp;ll=47.249407,3.164063&amp;spn=8.950641,25.004883&amp;z=5&amp;source=embed" style="color:#0000FF;text-align:left">Social Good Week</a> sur une carte plus grande</small>
+			<% end if %>
 
-		<%= render_content_page(@page, {
-		      :hide_sections => local_assigns[:hide_sections],
-		      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
-		    }) %>
+			<%= render_content_page(@page, {
+			      :hide_sections => local_assigns[:hide_sections],
+			      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
+			    }) %>
 
  		</section>
  		 		
@@ -18,13 +22,14 @@
   				<div><a href="/contact"><img src="assets/bloc-creation.jpg" alt="Proposez un événement" /></div>
   				<div><a href="/partenaires"><img src="assets/bloc-partenaires.jpg" alt="Partenaires" /></div>
   			</div>
-  			<div style="width:300px; height:300px; border:solid 1px grey; text-align:center;">flux twitter</div>
-  			<div style="width:300px; height:300px; border:solid 1px grey; text-align:center;">
-			<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-			<fb:like-box href='https://www.facebook.com/SocialGoodWeek' width='300px' show_faces='true' border_color='grey' stream='false' header='false'></fb:like-box>"
+  			<div style="width:300px; height:300px; border:solid 1px grey; text-align:center;"></div>
+  			<div style="width:300px; height:300px; border:0; text-align:center;">
+				<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+				<fb:like-box href='https://www.facebook.com/SocialGoodWeek' width='300px' show_faces='true' border_color='#ebebeb' stream='false' header='false'>
+				</fb:like-box>"
   			</div>
  		</aside>
- 		
+
  		<div class="clear"></div>
 </div>
 
