@@ -1,7 +1,7 @@
 <div id="wrap" class="gradient">
 	
 	<% if @page.id == 1 %>
-		<h4>Comment les nouvelles technologies peuvent-elles résoudre des problématiques sociétales ?</h4>
+		<h4>Les nouvelles technologies peuvent-elles rendre le monde meilleur ?</h4>
 	<% end if %>
 	
 		<section id="left-column">
@@ -15,21 +15,56 @@
 			    }) %>
 
  		</section>
- 	
+
 		<aside id="right-column">
 			<div class="btn-right">
-  				<div><a href="/evenements"><img src="assets/bloc-calendrier.jpg" alt="Evénements"/></a></div>
+				<% if @page.id == 1 %>
+  					<div><a href="/evenements"><img src="assets/bloc-calendrier.jpg" alt="Evénements"/></a></div>
+				<% end %>
   				<div><a href="/contact"><img src="assets/bloc-creation.jpg" alt="Proposez un événement" /></div>
-  				<div><a href="/partenaires"><img src="assets/bloc-partenaires.jpg" alt="Partenaires" /></div>
+				<% if @page.id == 1 %>
+  					<div><a href="/partenaires"><img src="assets/bloc-partenaires.jpg" alt="Partenaires" /></div>
+				<% end %>
   			</div>
-  			<div style="width:300px; height:300px; border:solid 1px grey; text-align:center;"></div>
+  			<div style="width:300px; height:300px; text-align:center;">
+  				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'search',
+				  search: 'socialgoodweek',
+				  interval: 30000,
+				  title: 'Ce qui se dit sur la ',
+				  subject: 'Social Good Week ',
+				  width: 300,
+				  height: 200,
+				  theme: {
+				    shell: {
+				      background: '#8ec1da',
+				      color: '#ffffff'
+				    },
+				    tweets: {
+				      background: '#ffffff',
+				      color: '#444444',
+				      links: '#1985b5'
+				    }
+				  },
+				  features: {
+				    scrollbar: false,
+				    loop: true,
+				    live: true,
+				    behavior: 'default'
+				  }
+				}).render().start();
+				</script>
+  			</div>
   			<div style="width:300px; height:300px; border:0; text-align:center;">
 				<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
 				<fb:like-box href='https://www.facebook.com/SocialGoodWeek' width='300px' show_faces='true' border_color='#ebebeb' stream='false' header='false'>
 				</fb:like-box>"
   			</div>
  		</aside>
-
+		
  		<div class="clear"></div>
 </div>
 

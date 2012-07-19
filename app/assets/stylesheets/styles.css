@@ -100,7 +100,7 @@ header h1{float: left;}
 
 header nav { margin-top: 30px; float: right; width: 470px;}
 header nav li{display: inline; padding: 0 3px; text-transform: capitalize;font-size: 12px; line-height: 90px;} 
-header nav li a{padding: 5px 10px;} 
+header nav li a{padding: 5px 5px;} 
 header nav li a:hover {color:#a5cd39;-webkit-transition: background 1s ease; -moz-transition: background 1s ease; -ms-transition: background 1s ease; -o-transition: background 1s ease; transition: background 1s ease; text-decoration: none;}
 header nav li .active {background-color:#393939; color: white; }
  
