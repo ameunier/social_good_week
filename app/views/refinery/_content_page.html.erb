@@ -1,12 +1,12 @@
 <div id="wrap" class="gradient">
 	
-	<% if @page.id == 1 %>
+	
 		<h4>Les nouvelles technologies peuvent-elles rendre le monde meilleur ?</h4>
-	<% end if %>
+	
 	
 		<section id="left-column">
 			<% if @page.id == 1 %>
-				<iframe width="570" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?ie=UTF8&amp;msa=0&amp;msid=206225401531026339590.0004c3ef41f9aba1b00cb&amp;t=m&amp;ll=46.950262,3.032227&amp;spn=12.002438,25.004883&amp;z=5&amp;output=embed"></iframe><br /><small>Afficher <a href="https://maps.google.com/maps/ms?ie=UTF8&amp;msa=0&amp;msid=206225401531026339590.0004c3ef41f9aba1b00cb&amp;t=m&amp;ll=46.950262,3.032227&amp;spn=12.002438,25.004883&amp;z=5&amp;source=embed" style="color:#0000FF;text-align:left">Social Good Week</a> sur une carte plus grande</small>
+				<iframe width="570" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?ie=UTF8&amp;msa=0&amp;msid=206225401531026339590.0004c3ef41f9aba1b00cb&amp;t=m&amp;ll=46.950262,3.032227&amp;spn=12.002438,25.004883&amp;z=5&amp;output=embed"></iframe><br /><!--<small>Afficher <a href="https://maps.google.com/maps/ms?ie=UTF8&amp;msa=0&amp;msid=206225401531026339590.0004c3ef41f9aba1b00cb&amp;t=m&amp;ll=46.950262,3.032227&amp;spn=12.002438,25.004883&amp;z=5&amp;source=embed" style="color:#0000FF;text-align:left">Social Good Week</a> sur une carte plus grande</small>-->
 			<% end if %>
 
 			<%= render_content_page(@page, {
@@ -17,14 +17,36 @@
  		</section>
 
 		<aside id="right-column">
+			<% if @page.id == 1 %>
 			<div class="btn-right">
-				<% if @page.id == 1 %>
-  					<div><a href="/evenements"><img src="assets/bloc-calendrier.jpg" alt="Evénements"/></a></div>
-				<% end %>
-  				<div><a href="/contact"><img src="assets/bloc-creation.jpg" alt="Proposez un événement" /></div>
-				<% if @page.id == 1 %>
-  					<div><a href="/partenaires"><img src="assets/bloc-partenaires.jpg" alt="Partenaires" /></div>
-				<% end %>
+  					<div>
+  						<a href="/evenements">
+  							<img class="bottom" src="assets/bloc-calendrier.jpg" alt="Evénements"/>
+  							<img class="top" src="assets/bloc-calendrier-hover.jpg" alt="Evénements"/>
+  						</a>
+  					</div>
+				
+			</div>
+			<% end %>
+			<% if @page.id == 1 %>
+			<div class="btn-right">
+				
+  					<div>
+  						<a href="/partenaires">
+  							<img class="bottom" src="assets/bloc-partenaires.jpg" alt="Partenaires"/>
+  							<img class="top" src="assets/bloc-partenaires-hover.jpg" alt="Partenaires"/>
+  						</a>
+  					</div>
+				
+  			</div>
+  			<% end %>
+  			<div class="btn-right">
+  				<div>
+  					<a href="/contact">
+  						<img class="bottom" src="assets/bloc-creation.jpg" alt="Création"/>
+  						<img class="top" src="assets/bloc-creation-hover.jpg" alt="Création"/>
+  					</a>
+  				</div>
   			</div>
   			<div style="width:300px; height:300px; text-align:center;">
   				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
@@ -34,19 +56,18 @@
 				  type: 'search',
 				  search: 'socialgoodweek',
 				  interval: 30000,
-				  title: 'Ce qui se dit sur la ',
-				  subject: 'Social Good Week ',
+				  title: '#socialgoodweek : ils en parlent ',
 				  width: 300,
 				  height: 200,
 				  theme: {
 				    shell: {
-				      background: '#8ec1da',
-				      color: '#ffffff'
+				      background: '#ebebeb',
+				      color: '#3b3b3b'
 				    },
 				    tweets: {
 				      background: '#ffffff',
 				      color: '#444444',
-				      links: '#1985b5'
+				      links: '#ef41a2'
 				    }
 				  },
 				  features: {
@@ -58,10 +79,10 @@
 				}).render().start();
 				</script>
   			</div>
-  			<div style="width:300px; height:300px; border:0; text-align:center;">
+  			<div style="width:300px; height:258px; border:0; text-align:center; background-color:white;">
 				<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
 				<fb:like-box href='https://www.facebook.com/SocialGoodWeek' width='300px' show_faces='true' border_color='#ebebeb' stream='false' header='false'>
-				</fb:like-box>"
+				</fb:like-box>
   			</div>
  		</aside>
 		
